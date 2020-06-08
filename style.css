@@ -74,7 +74,7 @@ input[type=number]{
 	width: 200px;
 	display: inline-block;
 }
-select{
+select, .option{
 	width: 211px;
 	border: 1px solid #000039;
 	padding: 4px;
@@ -99,7 +99,7 @@ input[type=radio]{
 	height: 15px;
 	border-radius: 50%;
 	padding-right: 4px;
-    margin-right: 5px;
+    margin-right: 10px;
 }
 input[type=radio]:checked{
 	background: #fff;
@@ -147,6 +147,7 @@ textarea{
 	font-weight: bolder;
 	display: flex;
 	justify-content: center;
+    align-items: center;
 	background: #fff;
 	border: none;
 	color: #000039;

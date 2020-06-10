@@ -2,23 +2,33 @@
 	<body>
 		<head>
 			<meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+			<link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.0.9/css/all.css">
             <link rel="stylesheet" type="text/css" href="style.css">
 		</head>
 		<h1 id="title">Survey Form</h1>
 		<p id="description">Do you want to start in web development ? Please, fill the form.
 		</p>
 		<form action="" id="survey-form">
-			<div> <label for="name" id="name-label"><i class="fas fa-user"></i> Name</label><input type="text" id="name" required placeholder="Please add your name" class="name"></div>
-			<div> <label for="email" id="email-label"><i class="far fa-envelope"></i> E-mail</label><input type="email" id="email" required placeholder="Enter your e-mail address" class="email"></div>
-			<div><label for="number" id="number-label">Age</label><input type="number" id="number" min="0" max="10" placeholder="Select a number"></div>
+			<div> 
+				<label for="name" id="name-label">Name</label>
+				<input type="text" id="name" required placeholder="&#xf007;" class="name fas">
+			</div>
 			<div>
-                
-				<label for="dropdown"><i class="fas fa-laptop"></i> Make your choice : </label>
-				<select id="dropdown" >
-					<option value="Front-end" class="option">Front-end</option>
-					<option value="Back-end" class="option">Back-end</option>
-					<option value="Full-Stack" class="option">Full-Stack </option>
+				<label for="email" id="email-label">E-mail</label>
+				<input type="email" id="email" required placeholder="&#xf0e0;" class="email fas">
+			</div>
+			<div>
+				<label for="number" id="number-label">Age</label>
+				<input type="number" id="number" min="0" max="10" placeholder="Select a number">
+			</div>
+			<div>
+				<label for="dropdown"><i class="fas fa-laptop"></i> Select your path :</label> 
+					<select id="dropdown" >
+						<option value="Front-end" class="option">Front-end</option>
+						<option value="Back-end" class="option">Back-end</option>
+						<option value="Full-Stack" class="option">Full-Stack </option>
 					</select>
+				</div>
 			</div>
 			
 			<div class="label">You want to learn :</div>
@@ -35,10 +45,10 @@
 				</div>
 			</div>
 			<div>
-				<label for="comments" class="comments"><i class="fas fa-comments"></i> Comments : </label>
+				<label for="comments" class="comments">Comments : </label>
 			</div>
 			<div>
-				<textarea name="comments" id="comments" cols="30" rows="5" placeholder="Please add your comments"></textarea>
+				<textarea name="comments" id="comments" cols="25" rows="5" placeholder="&#xf086; Please add your comments"></textarea>
 			</div>
 			<div>
 				<button id="submit"><i class="fas fa-paper-plane"></i> Submit</button>

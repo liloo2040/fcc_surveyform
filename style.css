@@ -16,6 +16,7 @@ h1#title{
 	text-align: center;
 	font-size: 50px;
 	color: white;
+	text-shadow: 1px 1px 4px #000039;
 	text-transform: uppercase;
 	font-family:'Poppins',sans-serif;
 }
@@ -23,7 +24,7 @@ form{
 	padding: 50px;
 	display: flex;
 	flex-direction: column;
-	background:linear-gradient(to bottom, transparent 50%, rgba(0,92,139, 0.5)100%);
+	background: transparent;
 	border-radius: 5px;
 	max-width: 50%;
     box-shadow: 1px 1px 4px rgb(0, 0, 57, 0.8);
@@ -37,7 +38,11 @@ div{
 	display: flex;
 	flex-wrap: wrap;
 	flex-direction: row;
-	align-items: justify;
+	align-items: center;
+}
+div > label{
+	text-transform: uppercase;
+	font-size: 12px;
 }
 input{
 	border-bottom: solid 1px;
@@ -59,6 +64,9 @@ input{
 	display: inline-block;
     caret-color: #000039;
 }
+.email, .name{
+	min-width: 150px;
+}
 input::placeholder{
 	font-family: 'Poppins', 'Font Awesome 5 Free', sans-serif;
 	font-size: 14px;
@@ -71,6 +79,10 @@ input::placeholder{
 	text-align: center;
 }
 
+label#name-label, label#email-label, label#number-label{
+	text-transform: uppercase;
+	font-size: 12px;
+}
 input[type=number]{
 	border: solid 1px;
 	border-image: linear-gradient(to right, rgba(0, 0, 57), rgb(63, 135, 166)) 1 20%;
@@ -83,13 +95,15 @@ input[type=number]{
 	font-family: 'Poppins', FontAwesome, sans-serif;
 	margin-top: 5px;
 	margin-bottom: 10px;
-	max-width: 210px;
+	max-width: 200px;
+	min-width: 150px;
 }
 input[type=number]::placeholder{
 	padding: 4px;
 }
 select, .option{
-	max-width: 220px;
+	max-width: 210px;
+	min-width: 150px;
 	border: solid 1px;
 	border-image: linear-gradient(to right, rgba(0, 0, 57), rgb(63, 135, 166)) 1 20%;
 	box-shadow: 1px 1px 4px #000039;
@@ -104,48 +118,51 @@ select, .option{
 	-moz-appearance:none;
 	-ms-appearance:none;
 	appearance: none;
-	margin-bottom: 1Opx;
+	margin-bottom: 10px;
 }
 
-input[type=radio]{
+input[type='radio']{
 	-webkit-appearance:none;
 	-moz-appearance:none;
 	-ms-appearance:none;
 	border: solid 1px;
-	border-image: linear-gradient(to right, rgba(0, 0, 57), rgb(63, 135, 166)) 1 20%;
+	box-shadow: 1px 1px 4px rgb(0, 0, 57, 0.8);
 	width: 15px;
 	height: 15px;
 	border-radius: 50%;
 	padding-right: 4px;
     margin-right: 5px;
 }
-input[type=radio]:checked{
+input[type='radio']:checked{
+	box-shadow: 1px 1px 4px rgb(0, 0, 57, 0.8);
 	background: #fff;
 	padding: 2px;
 	border: solid 1px;
-	border-image: linear-gradient(to right, rgba(0, 0, 57), rgb(63, 135, 166)) 1 20%;
 }
-input[type=checkbox]{
+input[type='checkbox']{
 	-webkit-appearance:none;
 	-moz-appearance:none;
 	-ms-appearance:none;
 	background: transparent;
+	box-shadow: 1px 1px 4px rgb(0, 0, 57, 0.8);
 	border: solid 1px;
-	border-image: linear-gradient(to right, rgba(0, 0, 57), rgb(63, 135, 166)) 1 20%;
 	width: 15px;
 	height: 15px;
 	margin-right: 10px;
 }
 
-input[type=checkbox]:checked {
+input[type='checkbox']:checked {
 	background: #fff;
 	border: solid 1px;
 	border-image: linear-gradient(to right, rgba(0, 0, 57), rgb(63, 135, 166)) 1 20%;
 	content: '';
+	box-shadow: 1px 1px 4px rgb(0, 0, 57, 0.8);
 }
 
 .comments{
 	margin-top: 5px;
+	text-transform: uppercase;
+	font-size: 12px;
 }
 textarea{
 	-webkit-appearance:none;
@@ -156,19 +173,23 @@ textarea{
 	border-image: linear-gradient(to right, rgba(0, 0, 57), rgb(63, 135, 166)) 1 20%;
 	color: #fff;
 	padding: 2px;
+	font-size: 14px;
 	box-shadow: 1px 1px 4px #000039;
 	font-family: 'Poppins', 'Font Awesome 5 Free', sans-serif;
 	display: block;
-	max-width: 500px;
-}
-textarea::placeholder{
-	padding: 4px;
+	padding: 10px;
+	min-width: 150px;
+	max-width: 320px;
 }
 
-button{
+
+#submit{
 	background-color: #fff;
 	box-shadow: 1px 1px 4px #000039;
-	max-width: 500px;
+	width: 340px;
+	min-width: 180px;
+	color: #000039;
+	border: none;
 	font-family: 'Poppins', sans-serif;
 	padding: 10px;
     font-size: 20px;
@@ -177,6 +198,7 @@ button{
 	text-transform: uppercase;
 	font-weight: bolder;
 	display: flex;
+	flex-direction: row;
 	justify-content: center;
     align-items: center;
 	letter-spacing: 4px;
@@ -189,6 +211,15 @@ button{
     align-items: center;
 }
 .label{
-    margin-right: 20px;
-	
+	display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+	font-size: 12px;
+	text-transform: uppercase;
+}
+.gender-custom{
+	font-size: 12px;
+	text-transform: uppercase;
+	align-items: center;
 }
